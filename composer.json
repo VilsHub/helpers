@@ -1,0 +1,19 @@
+{
+    "name": "vilshub/helpers",
+    "description": "Helper static methods, for all vilshub packages",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Starlyvil",
+            "email": "stalyvil@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "vilshub\\helpers\\" : "src"
+        }
+    }
+}
