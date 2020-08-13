@@ -14,6 +14,9 @@
         if(!is_string($colorValue)){
           throw new Exception("static method argument 2 must be a string");
         }
+        if(!is_string($data)){
+          throw new Exception("static method argument 1 must be a string");
+        }
       }catch(Exception $e){
         die(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
       }
