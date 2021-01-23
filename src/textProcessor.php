@@ -15,7 +15,7 @@
           throw new Exception("static method argument must be a string");
         }
       }catch(Exception $e){
-        die(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
+        trigger_error(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
       }
       $pattern = "/[^a-zA-Z0-9]+/";
       return !preg_match($pattern, $data);

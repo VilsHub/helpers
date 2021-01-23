@@ -20,7 +20,7 @@
           throw new Exception("<div{$ErrorStyle}>".$iError."</div>");
         }
       }catch(Exception $e){
-        die($e->getMessage());
+        trigger_error($e->getMessage());
       }
       $fullMessage = "";
       if($typeLower == "error"){

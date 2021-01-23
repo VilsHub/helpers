@@ -18,7 +18,7 @@
           throw new Exception("static method argument 1 must be a string");
         }
       }catch(Exception $e){
-        die(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
+        trigger_error(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
       }
       return "<span style='color:{$colorValue}'>{$data}</span>";
     }

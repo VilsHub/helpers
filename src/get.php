@@ -19,7 +19,7 @@
           throw new Exception("<div{$ErrorStyle}>".$iError."</div>");
         }
       }catch(Exception $e){
-        die(message::write("error", $e->getMessage()));
+        trigger_error(message::write("error", $e->getMessage()));
       };
       return "<b style='color:#8a1313'>{$className}::{$methodName}()</b> ";
     }
@@ -34,7 +34,7 @@
           throw new Exception("<div{$ErrorStyle}>".$iError."</div>");
         }
       }catch(Exception $e){
-        die(message::write("error", $e->getMessage()));
+        trigger_error(message::write("error", $e->getMessage()));
       };
       return "<b style='color:#8a1313'>{$className}->{$methodName}()</b> ";
     }
