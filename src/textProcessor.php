@@ -1,13 +1,13 @@
 <?php
-  namespace vilshub\helpers;
+  namespace vilshub\Helpers;
   /**
    *
    */
   use \Exception;
-  use vilshub\helpers\get;
-  use vilshub\helpers\message;
+  use vilshub\helpers\Get;
+  use vilshub\helpers\Message;
 
-  class textProcessor
+  class TextProcessor
   {
     public static function is_alpha_numeric($data){
       try{
@@ -15,7 +15,7 @@
           throw new Exception("static method argument must be a string");
         }
       }catch(Exception $e){
-        trigger_error(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
+        trigger_error(Message::write("error",Get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
       }
       $pattern = "/[^a-zA-Z0-9]+/";
       return !preg_match($pattern, $data);

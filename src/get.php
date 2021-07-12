@@ -4,9 +4,9 @@
    *
    */
   use \Exception;
-  use vilshub\helpers\message;
+  use vilshub\helpers\Message;
   // use function \
-  class get
+  class Get
   {
     public static function staticMethod ($className, $methodName){
       $ErrorStyle = " style='box-sizing: border-box; border:solid red 1px; color:red; width:100%; height:auto ; background-color:#f0cfcf; padding:10px;'";
@@ -19,7 +19,7 @@
           throw new Exception("<div{$ErrorStyle}>".$iError."</div>");
         }
       }catch(Exception $e){
-        trigger_error(message::write("error", $e->getMessage()));
+        trigger_error(Message::write("error", $e->getMessage()));
       };
       return "<b style='color:#8a1313'>{$className}::{$methodName}()</b> ";
     }
@@ -34,7 +34,7 @@
           throw new Exception("<div{$ErrorStyle}>".$iError."</div>");
         }
       }catch(Exception $e){
-        trigger_error(message::write("error", $e->getMessage()));
+        trigger_error(Message::write("error", $e->getMessage()));
       };
       return "<b style='color:#8a1313'>{$className}->{$methodName}()</b> ";
     }

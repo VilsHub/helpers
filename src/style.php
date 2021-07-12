@@ -1,13 +1,13 @@
 <?php
-  namespace vilshub\helpers;
+  namespace vilshub\Helpers;
   /**
    *
    */
   use \Exception;
-  use vilshub\helpers\get;
-  use vilshub\helpers\message;
+  use vilshub\helpers\Get;
+  use vilshub\helpers\Message;
   // use function \
-  class style
+  class Style
   {
     public static function color ($data, $colorValue){
       try{
@@ -18,7 +18,7 @@
           throw new Exception("static method argument 1 must be a string");
         }
       }catch(Exception $e){
-        trigger_error(message::write("error",get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
+        trigger_error(Message::write("error",Get::staticMethod(__CLASS__, __FUNCTION__). $e->getMessage()));
       }
       return "<span style='color:{$colorValue}'>{$data}</span>";
     }

@@ -1,11 +1,11 @@
 <?php
-  namespace vilshub\helpers;
+  namespace vilshub\Helpers;
   /**
    *
    */
   use \Exception;
-  // use function \
-  class message
+  
+  class Message
   {
     public static function write ($type, $msg){
       $typeLower = strtolower($type);
