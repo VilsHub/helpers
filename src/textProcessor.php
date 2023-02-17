@@ -1,5 +1,5 @@
 <?php
-  namespace vilshub\Helpers;
+  namespace vilshub\helpers;
   /**
    *
    */

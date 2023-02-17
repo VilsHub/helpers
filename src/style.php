@@ -1,12 +1,12 @@
 <?php
-  namespace vilshub\Helpers;
+  namespace vilshub\helpers;
   /**
    *
    */
   use \Exception;
   use vilshub\helpers\Get;
   use vilshub\helpers\Message;
-  // use function \
+
   class Style
   {
     public static function color ($data, $colorValue){
